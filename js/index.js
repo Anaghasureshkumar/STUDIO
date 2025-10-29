@@ -3,10 +3,10 @@ const artworks = [
   { title: "Sunrise Echo", artist: "Anita Rao", image: "images/art1.jpg" },
   { title: "Dream Forest", artist: "Ravi Menon", image: "images/art2.jpg" },
   { title: "Blue Horizon", artist: "Leena Das", image: "images/art3.jpg" },
-  { title: "Anagha", artist: "Anagha", image: "images/img5.jpg" },
-  { title: "Safna", artist: "Safna", image: "images/art5.jpg" },
-  { title: "Riju Raj", artist: "Riju Raj", image: "images/art6.jpg" },
-  { title: "Aswin", artist: "Aswin", image: "images/art4.jpg" }
+  { title: "A Village", artist: "Anagha", image: "images/img5.jpg" },
+  { title: "Sea and Sun", artist: "Safna", image: "images/art5.jpg" },
+  { title: "Doodles", artist: "Riju Raj", image: "images/art6.jpg" },
+  { title: "Dreams Tree", artist: "Aswin", image: "images/art4.jpg" }
 ];
 
 const gallery = document.getElementById("artGallery");
