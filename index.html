@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Anu ArtStudio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Bootstrap + Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.style.css">
+</head>
+
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container flex-column">
+
+      <!-- Logo + Menu -->
+      <div class="d-flex w-100 align-items-center justify-content-between">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="images/exhibition.png" alt="Logo" style="height:60px;">
+          <span class="ms-2 fw-bold">Anuzz ArtStudio</span>
+        </a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navmenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navmenu">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="index.html" class="nav-link active"><i class="bi bi-house-door-fill"></i> Home</a></li>
+            <li class="nav-item"><a href="gallery.html" class="nav-link"><i class="bi bi-images"></i> Gallery</a></li>
+            <li class="nav-item"><a href="exhibition.html" class="nav-link"><i class="bi bi-easel2-fill"></i> Exhibitions</a></li>
+            <li class="nav-item"><a href="drawing.html" class="nav-link"><i class="bi bi-pencil-fill"></i> Drawing Class</a></li>
+            <li class="nav-item"><a href="sale.html" class="nav-link"><i class="bi bi-cart-fill"></i> Art Sale</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link"><i class="bi bi-info-circle-fill"></i> About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link"><i class="bi bi-envelope-fill"></i> Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Marquee -->
+      <div class="nav-marquee text-center mt-2">
+        <marquee behavior="scroll" direction="left">
+          🎨 Upcoming Exhibition: “Colours of Kerala” – Nov 15, 2025 | Kochi Art Gallery • 
+          ✨ “Modern Impressions” – Dec 10, 2025 | Trivandrum Museum Hall • 
+          🖼️ “Nature in Canvas” – Jan 5, 2026 | Palakkad Cultural Center
+        </marquee>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Intro Section ===== -->
+  <section class="intro-section container my-5 py-5">
+    <div class="row align-items-center g-5">
+      <div class="col-md-6 text-center">
+        <img src="images/studio1.png" alt="ArtStudio" class="img-fluid rounded-4 shadow-lg">
+      </div>
+      <div class="col-md-6 text-center text-md-start">
+        <h1 class="fw-bold display-5 mb-3 text-dark"><i class="bi bi-brush-fill text-warning"></i> Where Imagination Takes Shape</h1>
+        <p class="lead mb-4">Welcome to <strong><i class="bi bi-palette2 text-danger"></i> Anuzz ArtStudio</strong> — where colors breathe life into ideas.</p>
+        <a href="gallery.html" class="btn btn-lg btn-dark rounded-pill"><i class="bi bi-eye-fill"></i> Explore Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Featured Artworks ===== -->
+  <section class="featured-section py-5 text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-5"><i class="bi bi-stars text-primary"></i> Featured Artworks</h2>
+      <div id="artGallery" class="row g-4"></div>
+    </div>
+  </section>
+
+  <!-- ===== Upcoming Exhibition ===== -->
+  <section class="exhibition-section py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-md-6 text-center text-md-start text-dark">
+          <h2 class="fw-bold mb-3"><i class="bi bi-calendar-event-fill text-danger"></i> Upcoming Exhibition</h2>
+          <h4 class="fw-semibold mb-3">🎨 “Colors of Life”</h4>
+          <p class="fs-5 mb-3">
+            Experience the <span class="text-warning">vibrancy of creativity</span> at our upcoming art show featuring
+            <strong>modern</strong> and <strong>traditional</strong> artworks from across Kerala.
+          </p>
+          <div id="countdown" class="fw-bold mb-4 fs-5"><i class="bi bi-hourglass-split text-danger"></i> Loading countdown...</div>
+          <p class="fs-6">
+            📅 <strong class="text-warning">Date:</strong> December 25, 2025<br>
+            📍 <strong class="text-warning">Venue:</strong> Kochi Art Gallery
+          </p>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="images/gallery2.jpg" alt="Exhibition" class="img-fluid rounded-4 shadow-lg">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Subscribe Modal ===== -->
+  <div class="modal fade" id="subscribeModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content glass-modal p-3 rounded-4">
+        <div class="modal-header border-0">
+          <h5 class="modal-title"><i class="bi bi-envelope-paper-heart-fill text-primary"></i> Join our ArtFamily</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><i class="bi bi-megaphone-fill"></i> Subscribe to get updates about exhibitions, featured artworks and offers.</p>
+          <form id="subscribeForm">
+            <input type="email" class="form-control mb-3" id="subscriberEmail" placeholder="you@example.com" required>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="dontShowAgain">
+              <label class="form-check-label" for="dontShowAgain"><i class="bi bi-x-circle"></i> Don’t show again</label>
+            </div>
+            <div id="subscribeMsg" class="text-success small mb-2" style="display:none;"></div>
+            <div class="text-end">
+              <button type="button" class="btn btn-outline-secondary me-2" data-bs-dismiss="modal"><i class="bi bi-x-lg"></i> Close</button>
+              <button type="submit" class="btn btn-primary"><i class="bi bi-send-check-fill"></i> Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-4">
+          <a href="index.html" class="d-inline-block mb-2">
+            <img src="images/exhibition.png" alt="Art Studio Logo" style="height:60px;">
+          </a>
+          <p class="mb-2 fw-semibold"><i class="bi bi-brush-fill"></i> Anuzz ArtStudio</p>
+          <p>Where imagination meets creativity — explore our world of art, exhibitions, and inspiration.</p>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold mb-3"><i class="bi bi-link-45deg"></i> Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
+            <li><a href="gallery.html"><i class="bi bi-images"></i> Gallery</a></li>
+            <li><a href="exhibition.html"><i class="bi bi-easel2-fill"></i> Exhibitions</a></li>
+            <li><a href="drawing.html"><i class="bi bi-pencil-fill"></i> Drawing Class</a></li>
+            <li><a href="sale.html"><i class="bi bi-cart-fill"></i> Art Sale</a></li>
+            <li><a href="about.html"><i class="bi bi-info-circle-fill"></i> About</a></li>
+            <li><a href="contact.html"><i class="bi bi-envelope-fill"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold mb-3"><i class="bi bi-telephone-fill"></i> Contact Us</h6>
+          <p><i class="bi bi-geo-alt-fill"></i> Anu ArtStudio, Mannarkkad, Palakkad, Kerala</p>
+          <p><i class="bi bi-phone-fill"></i> +91 98765 43210</p>
+          <p><i class="bi bi-envelope-at-fill"></i> <a href="mailto:info@anuzzartstudio.com">info@anuzzartstudio.com</a></p>
+          <div class="mt-2">
+            <a href="https://www.instagram.com/an__a__gh__a_?igsh=b2IwZTRjMmticXZl" target="_blank"><i class="bi bi-instagram"></i></a> |
+            <a href="https://pin.it/7vgJHr07T" target="_blank"><i class="bi bi-pinterest"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-light">
+      <div class="text-center mt-3">
+        <p>© 2025 Anu ArtStudio | Designed with <i class="bi bi-heart-fill text-danger"></i> in Kerala</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

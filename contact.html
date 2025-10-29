@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | Anu ArtStudio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Bootstrap + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/contact.style.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container flex-column">
+      <div class="d-flex w-100 align-items-center justify-content-between">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="images/exhibition.png" alt="Logo">
+          <span><i class="bi bi-brush text-warning"></i> Anuzz ArtStudio</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navmenu">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="index.html" class="nav-link active"><i class="bi bi-house-door"></i> Home</a></li>
+            <li class="nav-item"><a href="exhibition.html" class="nav-link"><i class="bi bi-easel2"></i> Exhibitions</a></li>
+            <li class="nav-item"><a href="drawing.html" class="nav-link"><i class="bi bi-pencil"></i> Drawing Class</a></li>
+            <li class="nav-item"><a href="sale.html" class="nav-link"><i class="bi bi-cart4"></i> Art Sale</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link"><i class="bi bi-info-circle"></i> About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link"><i class="bi bi-envelope"></i> Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== FALLING ICONS ===== -->
+  <div class="falling-icons">
+    <span>🎨</span>
+    <span>🖌️</span>
+    <span>🖼️</span>
+    <span>🎨</span>
+    <span>🖌️</span>
+    <span>🖼️</span>
+    <span>🎨</span>
+  </div>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact-section text-white">
+    <div class="overlay"></div>
+    <div class="container py-5 position-relative mt-5">
+
+      <!-- HEADING -->
+      <div class="text-center mb-5 fade-in text-dark">
+        <h1 class="fw-bold"><i class="bi bi-chat-left-text text-warning"></i> Get in Touch</h1>
+        <p class="text-dark">Let’s create something beautiful together at <strong>Anu ArtStudio</strong>.</p>
+      </div>
+
+      <!-- CONTACT DETAILS + FORM SIDE BY SIDE -->
+      <div class="row g-5 align-items-start justify-content-center">
+
+        <!-- LEFT SIDE (CONTACT DETAILS) -->
+        <div class="col-md-5">
+          <div class="text-dark bg-light bg-opacity-75 p-4 rounded-4 shadow-sm fade-in-delay">
+            <p class="studio-text fs-5">
+              <i class="bi bi-brush-fill text-warning"></i> At <strong>Anu ArtStudio</strong>, creativity meets emotion — every stroke tells a story.  
+              Whether you seek abstract art, digital design, or handcrafted beauty, we’re here to turn imagination into reality.
+            </p>
+
+            <p class="fs-6 mt-4">
+              <i class="bi bi-geo-alt-fill text-danger"></i> <strong>Mannarkkad, Palakkad, Kerala</strong><br>
+              <i class="bi bi-envelope-at text-primary"></i> 
+              <a href="mailto:anuzzartstudio@gmail.com" class="text-warning text-decoration-none">anuzzartstudio@gmail.com</a><br>
+              <i class="bi bi-telephone-fill text-success"></i> +91 98765 43210<br>
+              <i class="bi bi-clock-history text-secondary"></i> <strong class="text-warning">Opening Hours:</strong><br>
+              <span>Mon – Sat: 9:00 AM – 7:00 PM</span><br>
+              <span>Sunday: Closed</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE (CONTACT FORM) -->
+        <div class="col-md-6">
+          <div class="card bg-dark bg-opacity-75 text-white p-4 rounded-4 shadow-lg slide-up">
+            <h4 class="mb-3 text-center text-warning"><i class="bi bi-envelope-paper-heart"></i> Send Us a Message</h4>
+            <form>
+              <div class="mb-3">
+                <label class="form-label"><i class="bi bi-person-fill"></i> Your Name</label>
+                <input type="text" class="form-control" placeholder="Enter your name" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label"><i class="bi bi-at"></i> Email Address</label>
+                <input type="email" class="form-control" placeholder="Enter your email" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label"><i class="bi bi-chat-dots-fill"></i> Message</label>
+                <textarea class="form-control" rows="4" placeholder="Write your message..." required></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-warning text-dark px-4 fw-semibold">
+                  <i class="bi bi-send-fill"></i> Send
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAP SECTION -->
+      <div class="map-section mt-5 fade-in text-dark">
+        <h3 class="text-center mb-4"><i class="bi bi-geo-alt-fill text-danger"></i> Visit Our Studio</h3>
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-8 col-sm-10">
+            <div class="map-frame mx-auto shadow-lg rounded-5 overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.0000000000005!2d76.47200000000002!3d10.991700000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba86bf000000001%3A0x0!2sMannarkkad%2C%20Palakkad%2C%20Kerala!5e0!3m2!1sen!2sin!4v0000000000"
+                width="100%" height="350" style="border:0;" allowfullscreen loading="lazy">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="container">
+      <div class="row text-center text-md-start">
+        
+        <div class="col-md-4 mb-4">
+          <a href="index.html" class="d-inline-block mb-2">
+            <img src="images/exhibition.png" alt="Art Studio Logo" style="height:60px;">
+          </a>
+          <p class="mb-2 fw-semibold"><i class="bi bi-palette2 text-warning"></i> Anu ArtStudio</p>
+          <p>Where imagination meets creativity — explore our world of art, exhibitions, and inspiration.</p>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold mb-3"><i class="bi bi-link-45deg text-warning"></i> Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-house-door"></i> <a href="index.html">Home</a></li>
+            <li><i class="bi bi-images"></i> <a href="gallery.html">Gallery</a></li>
+            <li><i class="bi bi-easel2"></i> <a href="exhibition.html">Exhibitions</a></li>
+            <li><i class="bi bi-pencil"></i> <a href="drawing.html">Drawing Class</a></li>
+            <li><i class="bi bi-cart4"></i> <a href="sale.html">Art Sale</a></li>
+            <li><i class="bi bi-info-circle"></i> <a href="about.html">About</a></li>
+            <li><i class="bi bi-envelope"></i> <a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold mb-3"><i class="bi bi-person-rolodex text-warning"></i> Contact Us</h6>
+          <p><i class="bi bi-geo-alt"></i> <strong>Address:</strong> Anu ArtStudio, Mannarkkad, Palakkad, Kerala</p>
+          <p><i class="bi bi-telephone"></i> <strong>Phone:</strong> +91 98765 43210</p>
+          <p><i class="bi bi-envelope-at"></i> <strong>Email:</strong> <a href="mailto:info@anuzzartstudio.com">info@anuzzartstudio.com</a></p>
+          <div class="mt-2">
+            <a href="https://www.instagram.com/an__a__gh__a_?igsh=b2IwZTRjMmticXZl" target="_blank"><i class="bi bi-instagram fs-5 text-danger"></i></a>
+            <a href="https://pin.it/7vgJHr07T" target="_blank" class="ms-3"><i class="bi bi-pinterest fs-5 text-danger"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-light">
+      <div class="text-center mt-3">
+        <p><i class="bi bi-c-circle"></i> 2025 Anu ArtStudio | Designed with <i class="bi bi-heart-fill text-danger"></i> in Kerala</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

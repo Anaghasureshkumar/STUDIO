@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Anuzz ArtStudio | Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap + Fonts + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/gallery.style.css">
+</head>
+
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container flex-column">
+
+      <!-- Logo + Menu -->
+      <div class="d-flex w-100 align-items-center justify-content-between">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="images/exhibition.png" alt="Logo" height="40" class="me-2">
+          <span class="fw-bold text-dark"><i class="bi bi-brush-fill text-danger"></i> Anuzz ArtStudio</span>
+        </a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navmenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navmenu">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="index.html" class="nav-link active"><i class="bi bi-house-door-fill me-1"></i> Home</a></li>
+            <li class="nav-item"><a href="exhibition.html" class="nav-link"><i class="bi bi-easel2-fill me-1"></i> Exhibitions</a></li>
+            <li class="nav-item"><a href="drawing.html" class="nav-link"><i class="bi bi-pencil-fill me-1"></i> Drawing Class</a></li>
+            <li class="nav-item"><a href="sale.html" class="nav-link"><i class="bi bi-bag-heart-fill me-1"></i> Art Sale</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link"><i class="bi bi-person-circle me-1"></i> About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link"><i class="bi bi-envelope-fill me-1"></i> Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Gallery Section ===== -->
+  <section class="container py-5 mt-5">
+    <h2 class="fw-bold text-center mb-4 text-dark gallery-heading">
+      <i class="bi bi-palette-fill text-warning"></i> Our Art Gallery
+    </h2>
+
+    <!-- Filter Buttons -->
+    <div class="text-center mb-4">
+      <div class="filter-btns mt-2">
+        <button class="btn btn-outline-dark active" onclick="filterCategory('all')"><i class="bi bi-grid-fill me-1"></i> All</button>
+        <button class="btn btn-outline-dark" onclick="filterCategory('Painting')"><i class="bi bi-brush-fill me-1 text-danger"></i> Painting</button>
+        <button class="btn btn-outline-dark" onclick="filterCategory('Drawing')"><i class="bi bi-pencil-square me-1 text-primary"></i> Drawing</button>
+        <button class="btn btn-outline-dark" onclick="filterCategory('Sculpture')"><i class="bi bi-gem me-1 text-info"></i> Sculpture</button>
+        <button class="btn btn-outline-dark" onclick="filterCategory('Digital')"><i class="bi bi-laptop me-1 text-success"></i> Digital</button>
+        <button class="btn btn-outline-dark" onclick="filterCategory('Other')"><i class="bi bi-stars me-1 text-warning"></i> Other</button>
+      </div>
+
+      <div class="row mt-4 justify-content-center">
+        <div class="col-md-4">
+          <select id="combinedFilter" class="form-select shadow-sm">
+            <option value="all">🎨 All Artworks</option>
+            <optgroup label="Artists">
+              <option value="Anita Rao">🎨 Anita Rao</option>
+              <option value="Ravi Menon">🖌️ Ravi Menon</option>
+              <option value="Divya Nair">🌸 Divya Nair</option>
+              <option value="Kiran Das">🎭 Kiran Das</option>
+              <option value="Leena Das">🖍️ Leena Das</option>
+              <option value="Maya Balan">🎨 Maya Balan</option>
+              <option value="Anital">🖋️ Anital</option>
+              <option value="Anagha">✨ Anagha</option>
+              <option value="Safna">🌿 Safna</option>
+              <option value="Riju Raj">🎭 Riju Raj</option>
+              <option value="Aswin">🎨 Aswin</option>
+            </optgroup>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="row" id="galleryGrid"></div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="bg-dark text-center text-light py-3 mt-5">
+    <p class="mb-0">
+      <i class="bi bi-c-circle"></i> 2025 <strong>Anuzz ArtStudio</strong> | Designed with 
+      <i class="bi bi-heart-fill text-danger"></i> in Kerala.
+    </p>
+    <p class="small text-light mb-0">
+      Follow us on 
+      <a href="https://www.instagram.com/an__a__gh__a_?igsh=b2IwZTRjMmticXZl" target="_blank" class="text-light mx-1">
+        <i class="bi bi-instagram"></i>
+      </a>
+      <a href="https://pin.it/7vgJHr07T" target="_blank" class="text-light mx-1">
+        <i class="bi bi-pinterest"></i>
+      </a>
+      <a href="#" class="text-light mx-1">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a href="#" class="text-light mx-1">
+        <i class="bi bi-twitter-x"></i>
+      </a>
+    </p>
+  </footer>
+
+  <!-- Bootstrap + Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
