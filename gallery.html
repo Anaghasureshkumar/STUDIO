@@ -17,34 +17,30 @@
 
 <body>
 
-  <!-- ===== Navbar ===== -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
-    <div class="container flex-column">
+  <!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="images/exhibition.png" alt="Logo" height="40" class="me-2">
+      <span class="fw-bold text-dark"><i class="bi bi-palette2 text-danger"></i> Anuzz ArtStudio</span>
+    </a>
 
-      <!-- Logo + Menu -->
-      <div class="d-flex w-100 align-items-center justify-content-between">
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <img src="images/exhibition.png" alt="Logo" height="40" class="me-2">
-          <span class="fw-bold text-dark"><i class="bi bi-brush-fill text-danger"></i> Anuzz ArtStudio</span>
-        </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navmenu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse justify-content-end" id="navmenu">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a href="index.html" class="nav-link active"><i class="bi bi-house-door-fill me-1"></i> Home</a></li>
-            <li class="nav-item"><a href="exhibition.html" class="nav-link"><i class="bi bi-easel2-fill me-1"></i> Exhibitions</a></li>
-            <li class="nav-item"><a href="drawing.html" class="nav-link"><i class="bi bi-pencil-fill me-1"></i> Drawing Class</a></li>
-            <li class="nav-item"><a href="sale.html" class="nav-link"><i class="bi bi-bag-heart-fill me-1"></i> Art Sale</a></li>
-            <li class="nav-item"><a href="about.html" class="nav-link"><i class="bi bi-person-circle me-1"></i> About</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link"><i class="bi bi-envelope-fill me-1"></i> Contact</a></li>
-          </ul>
-        </div>
-      </div>
+    <div class="collapse navbar-collapse justify-content-end" id="navmenu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="index.html" class="nav-link"><i class="bi bi-house-door"></i> Home</a></li>
+        <li class="nav-item"><a href="exhibition.html" class="nav-link"><i class="bi bi-easel2"></i> Exhibitions</a></li>
+        <li class="nav-item"><a href="drawing.html" class="nav-link"><i class="bi bi-pencil"></i> Drawing Class</a></li>
+        <li class="nav-item"><a href="sale.html" class="nav-link "><i class="bi bi-cart4"></i> Art Sale</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link"><i class="bi bi-info-circle"></i> About</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link"><i class="bi bi-envelope"></i> Contact</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- ===== Gallery Section ===== -->
   <section class="container py-5 mt-5">
@@ -117,3 +113,4 @@
   <script src="js/gallery.js"></script>
 </body>
 </html>
+
