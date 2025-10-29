@@ -16,23 +16,22 @@ canvas.addEventListener('mousemove', draw);
 function draw(e) {
   if (!drawing) return;
 
+  const rect = canvas.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
   ctx.lineWidth = brushSize;
   ctx.lineCap = 'round';
 
-  if (tool === 'eraser') {
-    ctx.strokeStyle = '#ffffff';
-  } else {
-    ctx.strokeStyle = brushColor;
-  }
+  ctx.strokeStyle = (tool === 'eraser') ? '#ffffff' : brushColor;
+  ctx.globalAlpha = (tool === 'pencil') ? 0.8 : 1.0;
 
-  if (tool === 'pencil') ctx.globalAlpha = 0.8;
-  else ctx.globalAlpha = 1;
-
-  ctx.lineTo(e.offsetX, e.offsetY);
+  ctx.lineTo(x, y);
   ctx.stroke();
   ctx.beginPath();
-  ctx.moveTo(e.offsetX, e.offsetY);
+  ctx.moveTo(x, y);
 }
+
 
 // ===== Tool Buttons =====
 document.getElementById('pencilBtn').addEventListener('click', () => tool = 'pencil');
