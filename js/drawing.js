@@ -5,26 +5,45 @@ let brushColor = '#000000';
 let brushSize = 5;
 let tool = 'pencil';
 
-// ===== Drawing Functions =====
-canvas.addEventListener('mousedown', () => drawing = true);
-canvas.addEventListener('mouseup', () => {
+// ===== Resize Canvas Responsively =====
+function resizeCanvas() {
+  canvas.width = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+}
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+// ===== Start & Stop Drawing =====
+function startDraw(e) {
+  drawing = true;
+  draw(e);
+}
+function stopDraw() {
   drawing = false;
   ctx.beginPath();
-});
-canvas.addEventListener('mousemove', draw);
+}
 
+// ===== Main Draw Function =====
 function draw(e) {
   if (!drawing) return;
 
   const rect = canvas.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
+  let x, y;
+
+  if (e.touches) {
+    // Touch input
+    x = e.touches[0].clientX - rect.left;
+    y = e.touches[0].clientY - rect.top;
+  } else {
+    // Mouse input
+    x = e.clientX - rect.left;
+    y = e.clientY - rect.top;
+  }
 
   ctx.lineWidth = brushSize;
   ctx.lineCap = 'round';
-
   ctx.strokeStyle = (tool === 'eraser') ? '#ffffff' : brushColor;
-  ctx.globalAlpha = (tool === 'pencil') ? 0.8 : 1.0;
+  ctx.globalAlpha = (tool === 'pencil') ? 0.8 : 1;
 
   ctx.lineTo(x, y);
   ctx.stroke();
@@ -32,8 +51,18 @@ function draw(e) {
   ctx.moveTo(x, y);
 }
 
+// ===== Mouse + Touch Events =====
+canvas.addEventListener('mousedown', startDraw);
+canvas.addEventListener('mouseup', stopDraw);
+canvas.addEventListener('mouseout', stopDraw);
+canvas.addEventListener('mousemove', draw);
 
-// ===== Tool Buttons =====
+canvas.addEventListener('touchstart', startDraw);
+canvas.addEventListener('touchend', stopDraw);
+canvas.addEventListener('touchcancel', stopDraw);
+canvas.addEventListener('touchmove', draw);
+
+// ===== Tools =====
 document.getElementById('pencilBtn').addEventListener('click', () => tool = 'pencil');
 document.getElementById('brushBtn').addEventListener('click', () => tool = 'brush');
 document.getElementById('eraserBtn').addEventListener('click', () => tool = 'eraser');
